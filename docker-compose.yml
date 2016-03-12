@@ -1,0 +1,10 @@
+version: '2'
+services:
+  stack:
+    build: ./src/stack
+    image: haskell-helper-stack
+  cache:
+    build: ./src/cache
+    image: haskell-helper-cache
+    depends_on: stack
+
